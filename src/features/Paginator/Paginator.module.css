@@ -1,0 +1,16 @@
+.paginatorList {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+
+.paginatorElipsis {
+  padding: 12px;
+  align-self: flex-end;
+  margin-top: auto;
+}

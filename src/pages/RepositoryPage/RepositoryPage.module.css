@@ -1,0 +1,19 @@
+.ownerAvatar {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.ownerInfo .ownerTitle {
+  color: var(--colorBlack);
+  font-size: 16px;
+}
+
+.repositoryName {
+  margin: 0;
+  font-size: 32px;
+}
+
+.subtitle {
+  margin: 8px 0;
+}

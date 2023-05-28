@@ -1,0 +1,12 @@
+.spacer {
+  display: flex;
+  gap: 8px;
+}
+
+.spacerRow {
+  flex-direction: row;
+}
+
+.spacerColumn {
+  flex-direction: column;
+}

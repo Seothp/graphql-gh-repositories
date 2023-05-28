@@ -1,0 +1,18 @@
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item {
+  box-shadow: 0px 1px 4px var(--colorGreyMedium);
+  border-radius: 4px;
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.item .title {
+  display: block;
+  font-size: 24px;
+  color: var(--colorBlack)
+}
