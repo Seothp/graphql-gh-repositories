@@ -1,0 +1,13 @@
+.searchForm {
+  display: flex;
+}
+
+.input {
+  flex-grow: 1;
+}
+
+.button {
+  width: auto;
+  flex-grow: 0;
+  margin-left: 8px;
+}
