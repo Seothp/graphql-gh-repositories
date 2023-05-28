@@ -55,8 +55,11 @@ export const useRepositoriesToShow = ({ query }: Props) => {
   const { data: userData, loading: isUserDataLoading } = useQuery(
     GET_USER_REPOSITORIES
   );
-
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const foundRepositories = searchData?.search.edges.map(({ node }) => node)
+   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const userRepositories = userData?.viewer.repositories.edges.map(({ node }) => node)
   const countOfFoundRepositories = searchData?.search.repositoryCount;
   const countOfUserRepositories = userData?.viewer.repositories.totalCount;

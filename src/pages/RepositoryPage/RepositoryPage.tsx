@@ -64,6 +64,8 @@ export const RepositoryPage = () => {
     shortDescriptionHTML: description,
   } = data.node;
 
+   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const preparedLanguages = edges.map(({ size, node: { color, name } }) => {
     return {
       size,
