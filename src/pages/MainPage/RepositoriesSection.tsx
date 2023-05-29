@@ -16,8 +16,15 @@ type Props = {
   countOfRepositories: number;
 };
 
-export const RepositoriesSection = ({ repositories, countOfRepositories }: Props) => {
+export const RepositoriesSection = ({
+  repositories,
+  countOfRepositories,
+}: Props) => {
   const [page, setPage] = useState(1);
+
+  if (!repositories) {
+    return null;
+  }
 
   const countOfPages = Math.ceil(countOfRepositories / REPOSITORIES_PER_PAGE);
   const countOfPagesToShow =

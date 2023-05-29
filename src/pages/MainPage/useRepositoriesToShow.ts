@@ -46,13 +46,13 @@ const SEARCH_REPOSITORIES_BY_QUERY = gql`
 `;
 
 export const useRepositoriesToShow = ({ query }: Props) => {
-  const { data: searchData, loading: isSearchDataLoading } = useQuery(SEARCH_REPOSITORIES_BY_QUERY, {
+  const { data: searchData, loading: isSearchDataLoading, error: searchError } = useQuery(SEARCH_REPOSITORIES_BY_QUERY, {
     variables: {
       query,
     },
   });
 
-  const { data: userData, loading: isUserDataLoading } = useQuery(
+  const { data: userData, loading: isUserDataLoading, error: userError } = useQuery(
     GET_USER_REPOSITORIES
   );
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -67,6 +67,7 @@ export const useRepositoriesToShow = ({ query }: Props) => {
   if (!query) {
     return {
       isLoading: isUserDataLoading,
+      error: userError,
       data: {
         repositories: userRepositories,
         countOfRepositories: countOfUserRepositories,
@@ -76,6 +77,7 @@ export const useRepositoriesToShow = ({ query }: Props) => {
 
   return {
     isLoading: isSearchDataLoading,
+    error: searchError,
     data: {
       repositories: foundRepositories,
       countOfRepositories: countOfFoundRepositories,
